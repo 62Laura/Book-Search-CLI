@@ -25,3 +25,18 @@ This application allows users to search for books using an external API, save th
 ```bash
 git clone https://github.com/your-username/book-search-cli.git
 cd book-search-cli
+2. Install dependencies
+Ensure that you have Python 3 installed, and then install the required packages:
+
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3. Run the CLI Application
+After initializing the database, run the CLI application:
+
+bash
+Copy
+Edit
+python book_search.py
+Follow the prompts to search for books, save favorites, and view your saved books.                                                                                                                                                 
