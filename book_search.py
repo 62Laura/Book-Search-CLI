@@ -35,7 +35,7 @@ def init_db():
     conn.close()
 
 
-# Search for Books with Pagination
+# Search for Books
 def search_books():
     page = 1
     while True:
