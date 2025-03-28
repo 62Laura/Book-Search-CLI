@@ -1,7 +1,7 @@
 # Book Search CLI Application
 
 ## Overview
-The **Book Search CLI** is a command-line application that allows users to search for books using the Google Books API, save them to a local SQLite database, and view their saved favorites. This README provides instructions for running the application locally and deploying it to web servers.
+The **Book Search CLI** is a command-line application that allows users to search for books using the Google Books API, save them to a local SQLite database, and view their saved favorites.
 
 ## Features
 - Search for books using the Google Books API.
