@@ -55,6 +55,6 @@ cd /home/ubuntu/project`
 
 
 ### Credits
-**Google Books API**: Used for fetching book data. API Documentation
+**Google Books API**: Used for fetching book data.
 
 **Libraries Used**: Python standard libraries, SQLite3, and Rich for enhanced CLI output.
