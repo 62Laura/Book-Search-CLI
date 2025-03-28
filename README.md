@@ -26,8 +26,8 @@ The **Book Search CLI** is a command-line application that allows users to searc
 cd book-search-cli `
 ### 2. Install Dependencies
 Make sure you have Python 3 and the required libraries installed. Use pip to install dependencies:
-`pip install rich`
-3. Run the Application
+`pip install rich`, `pip install requests `
+### 3. Run the Application
 `python book_search.py`
 ### Deployment
 To deploy this application to a web server, follow these steps:
