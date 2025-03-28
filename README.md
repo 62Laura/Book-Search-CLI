@@ -1,42 +1,74 @@
-# Book Search CLI Application
+Book Search CLI Application
+Overview
+The Book Search CLI is a command-line application that allows users to search for books using the Google Books API, save them to a local SQLite database, and view their saved favorites. This README provides instructions for running the application locally and deploying it to web servers.
 
-## Introduction
-This application allows users to search for books using an external API, save their favorite books into a local SQLite database, and view those saved books through a CLI interface.
+Features
+Search for books using the Google Books API.
 
-## Features
-- Search for books using an external API.
-- Save books to favorites.
-- View favorite books.
+Save favorite books to a local SQLite database.
 
-## External API Used
-- **Google Books API**: The application fetches book data from Google Books API (https://developers.google.com/books).
+View saved books through the CLI.
 
-### API Key Management
-- The Google Books API is a public API and does not require an API key for basic requests. Make sure to check the API documentation for additional features or limits.
+APIs Used
+Google Books API: This API allows fetching book data. No API key is required for basic usage. API Documentation
 
-## Requirements
-- Python 3.x
-- SQLite
-  
-## How to Run Locally
+Requirements
+Python 3.x
 
-### 1. Clone the repository
+SQLite3 (for local database)
 
-```bash
+Web Servers: Ubuntu (for deployment)
+
+How to Run Locally
+Clone the Repository:
+
+bash
+Copy
+Edit
 git clone https://github.com/your-username/book-search-cli.git
 cd book-search-cli
-2. Install dependencies
-Ensure that you have Python 3 installed, and then install the required packages:
+Install Dependencies:
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-3. Run the CLI Application
-After initializing the database, run the CLI application:
+Run the Application:
 
 bash
 Copy
 Edit
 python book_search.py
-Follow the prompts to search for books, save favorites, and view your saved books.                                                                                                                                                 
+Deployment
+To deploy this application to a web server, follow these steps:
+
+1. Transfer Application to Server
+Use SCP to transfer the project files to the server:
+
+bash
+Copy
+Edit
+scp -r /path/to/your/project ubuntu@your-server-ip:/home/ubuntu/project
+2. Install Dependencies on the Server
+SSH into the server and install Python and SQLite:
+
+bash
+Copy
+Edit
+ssh ubuntu@your-server-ip
+sudo apt update
+sudo apt install python3 python3-pip sqlite3
+cd /home/ubuntu/project
+pip3 install -r requirements.txt
+3. Run the Application on the Server
+bash
+Copy
+Edit
+python3 book_search.py
+Challenges & Solutions
+Deploying to Remote Servers: Transferring files and setting up dependencies required careful attention to ensure all necessary libraries were installed on the servers.
+
+Load Balancing: Setting up NGINX for load balancing was challenging but was resolved by configuring upstream settings to balance requests across multiple servers.
+
+Credits
+Google Books API: For fetching book data. API Documentation
